@@ -46,6 +46,14 @@ tar xvfz deepspeech-0.5.0-models.tar.gz
 ### VoiceFilter
 - Follow the instruction in original [README.md](voicefilter)
 - The major contributions are [new loss function](https://github.com/thejungwon/mwetss/blob/a16c7f44b5d6ea0c115748e4e6ef53cd74abcbc1/voicefilter/utils/train.py#L17-L24) and [WER calculator](https://github.com/thejungwon/mwetss/blob/master/voicefilter/utils/worderrorrate.py).
+
+## Training process
+- After prepare, all the require audio data, generate the new ground truth.
+```
+#In deepspeech-client
+(venv) ./generator.sh [PATH_OF_AUDIO_FILE]
+```
+- Then start training the same way in [README.md](voicefilter).
 ## License
 
 Apache License 2.0
