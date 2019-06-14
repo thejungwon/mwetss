@@ -1,0 +1,2 @@
+python generator.py -c config/config.yaml -d /home/stud/jungwon/audio_data -o /home/stud/jungwon/audio_data -p 20
+python trainer.py -c config/config.yaml -e embedder.pt -m voicefilter
