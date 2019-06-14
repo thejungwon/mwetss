@@ -16,18 +16,13 @@ import numpy as np
 
 def wmse(t1, t2, wer=[]):
     diff = t1 - t2
-
-    # m_wer = np.median(wer)
-    # mse = torch.sum(diff * diff) / diff.numel()
     alpha = 0.3
     wer = np.array(wer).reshape(diff.shape[0],1,1)
     weight = torch.tensor(alpha+wer)
     weight = weight.type(torch.FloatTensor)
     weight = weight.cuda()
-
     weighted_mse = torch.sum(weight* diff * diff) / diff.numel()
-    # print("normal mse", mse)
-    # print("weighted mse", weighted_mse)
+
     return weighted_mse
 def custom_loss(s1,s2):
     alpha = torch.tensor(0.113).cuda()
