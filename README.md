@@ -38,10 +38,10 @@ tar xvfz deepspeech-0.5.0-models.tar.gz
 ```
 - Run the 8 clients code with a port number
 ```
-  python client 8080
-  python client 8081
+  python client.py 8080
+  python client.py 8081
   ...
-  python client 8087
+  python client.py 8087
 ```
 ### VoiceFilter
 - Follow the instruction in original [README.md](voicefilter)
