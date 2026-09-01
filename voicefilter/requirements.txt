@@ -13,7 +13,7 @@ llvmlite==0.28.0
 matplotlib==3.0.3
 mir-eval==0.5
 numba==0.43.1
-numpy==1.16.2
+numpy==1.22.0
 Pillow==5.4.1
 protobuf==3.7.1
 pyparsing==2.3.1
